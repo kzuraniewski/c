@@ -2,13 +2,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-int main() {
-    int a, status;
+int main()
+{
+	int inp;
 
-    do {
-        status = scanf("%d", &a);
-        if (status != 1) printf("bledne dane\n");
-        
-    } while (a != '\n');
+	while (scanf(" %d", &inp) != 1)
+	{
+		printf("niepoprawne dane\n");
+
+		do
+			inp = getchar();
+		while (inp != '\n');
+	}
+
+	return 0;
 }
