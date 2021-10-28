@@ -1,1 +1,5 @@
 nazwa macierzy jest wskaźnikiem
+
+silnia: 
+ - dla kazdego typu max liczba jako treść maila
+ - różnica w czasie spostrzeżenia
