@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
 	{
 		in[i] = strtod(argv[i + 1], &pEnd);
 
+		/* if (*pEnd != '\n')... */
+
 		if (pEnd != argv[i + 1] + strlen(argv[i + 1]))
 		{
 			printf("nieprawidlowe dane\n");
