@@ -4,10 +4,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define STRONG_TYPE unsigned long long
+#define FACTORIAL_TYPE unsigned long long
 #define ITERATIONS 1000000000
 
-STRONG_TYPE silnia_rek(int a)
+FACTORIAL_TYPE silnia_rek(int a)
 {
     if (a < 0)
         return -1;
@@ -15,12 +15,12 @@ STRONG_TYPE silnia_rek(int a)
     return a > 2 ? silnia_rek(a - 1) * a : a;
 }
 
-STRONG_TYPE silnia_it(int a)
+FACTORIAL_TYPE silnia_it(int a)
 {
     if (a < 0)
         return -1;
 
-    STRONG_TYPE i = 1;
+    FACTORIAL_TYPE i = 1;
 
     while (a > 0)
         i *= a--;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     /* --- */
 
     {
-        STRONG_TYPE rek, it;
+        FACTORIAL_TYPE rek, it;
         int i;
 
         for (i = 0; i < ITERATIONS; i++)

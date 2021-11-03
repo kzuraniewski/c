@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define STRONG_TYPE unsigned long long
+#define FACTORIAL_TYPE unsigned int
 
-STRONG_TYPE silnia_rek(int a)
+FACTORIAL_TYPE silnia_rek(int a)
 {
     if (a < 0)
         return -1;
@@ -14,12 +14,12 @@ STRONG_TYPE silnia_rek(int a)
     return a > 2 ? silnia_rek(a - 1) * a : a;
 }
 
-STRONG_TYPE silnia_it(int a)
+FACTORIAL_TYPE silnia_it(int a)
 {
     if (a < 0)
         return -1;
 
-    STRONG_TYPE i = 1;
+    FACTORIAL_TYPE i = 1;
 
     while (a > 0)
         i *= a--;
@@ -46,13 +46,13 @@ int main(int argc, char *argv[])
 
     /* --- */
 
-    STRONG_TYPE rek, it;
+    FACTORIAL_TYPE rek, it;
 
     rek = silnia_rek(inp);
     it = silnia_it(inp);
 
-    printf("(recursion) n! = %lld\n", rek);
-    printf("(iteration) n! = %lld\n", it);
+    printf("(recursion) n! = %d\n", rek);
+    printf("(iteration) n! = %d\n", it);
 
     return 0;
 }
