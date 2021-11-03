@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define FACTORIAL_TYPE unsigned int
+#define FACTORIAL_TYPE long long int
 
 FACTORIAL_TYPE silnia_rek(int a)
 {
@@ -51,8 +51,8 @@ int main(int argc, char *argv[])
     rek = silnia_rek(inp);
     it = silnia_it(inp);
 
-    printf("(recursion) n! = %d\n", rek);
-    printf("(iteration) n! = %d\n", it);
+    printf("(recursion) n! = %lld\n", rek);
+    printf("(iteration) n! = %lld\n", it);
 
     return 0;
 }

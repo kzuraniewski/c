@@ -5,7 +5,7 @@ silnia:
     short: 7
     unsigned short: 8
     int: 12
-    unsigned int: 12
+    long, long long: 20
     double: 170
     long double: 1754 
  - różnica w czasie spostrzeżenia
