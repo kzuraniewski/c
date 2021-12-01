@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include "funkcja.h"
 #include "mzero.h"
 
 #define ARGS 4
@@ -21,9 +20,10 @@ int main(int argc, char *argv[])
     }
 
     char *pEnd;
-    int inp[4];
+    double inp[4];
+    int i = ARGS;
 
-    for (int i = 0; i < ARGS; i++)
+    while (i--)
     {
         inp[i] = strtod(argv[i + 1], &pEnd);
 
@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
     }
 
     /* --- */
+
     double r;
     int status;
 
@@ -46,7 +47,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    printf("%f", r);
+    printf("%f\n", r);
 
     return 0;
 }
